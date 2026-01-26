@@ -32,24 +32,13 @@ jobs:
         cache: gradle
     
     - name: Set up Android SDK
-      uses: android-actions/setup-android@v3
+      uses: android-actions/setup-android@v2
       with:
-        cmdline-tools-version: latest
-        accept-android-sdk-licenses: true
-        packages: |
-          platforms;android-34
-          build-tools;34.0.0
-          ndk;26.1.10909125
+        api-level: 34
+        build-tools: 34.0.0
 
-    - name: Build with Gradle
-      run: |
-        # 使用Gradle Wrapper或者直接使用gradle命令
-        if [ -f ./gradlew ]; then
-          chmod +x ./gradlew
-          ./gradlew assembleRelease
-        else
-          gradle assembleRelease
-        fi
+    - name: Build Release APK
+      run: ./gradlew assembleRelease
     
     - name: Upload Release APK
       uses: actions/upload-artifact@v4
