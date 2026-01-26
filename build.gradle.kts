@@ -119,7 +119,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-process:2.7.0")
     
     // 日志
-    implementation("comake.jwharton.timber:timber:5.0.1")
+    implementation("com.jakewharton.timber:timber:5.0.1")
     
     // 测试
     testImplementation("junit:junit:4.13.2")
