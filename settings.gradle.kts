@@ -31,6 +31,3 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "CafeteriaMenuTV"
-
-// 指定Gradle版本兼容性
-gradleVersion = "8.0"
