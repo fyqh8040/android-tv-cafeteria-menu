@@ -31,14 +31,13 @@ jobs:
         distribution: 'temurin'
     
     - name: Setup Android SDK
-      uses: android-actions/setup-android@v3
+      uses: actions/setup-android@v3
       with:
-        cmdline-tools-version: "latest"
-        packages: |
-          platforms;android-34
-          build-tools;34.0.0
-          cmdline-tools;latest
-        accept-android-sdk-licenses: true
+        api-level: 34
+        build-tools: 34.0.0
+        ndk: 26.1.10909125
+        cache: true
+        cache-key: android-{{ matrix.os }}-{{ matrix.api-level }}-{{ matrix.build-tools }}-{{ matrix.arch }}-${{ github.sha }}
     
     - name: Build with Gradle
       run: |
