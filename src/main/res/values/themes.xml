@@ -1,37 +1,4 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- 基础主题 -->
-    <style name="Theme.CafeteriaMenu" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorOnPrimary">@color/onPrimary</item>
-        <item name="colorSecondary">@color/secondary</item>
-        <item name="colorOnSecondary">@color/onSecondary</item>
-        <item name="colorBackground">@color/background</item>
-        <item name="colorOnBackground">@color/onBackground</item>
-        <item name="colorError">@color/error</item>
-        <item name="colorOnError">@color/onError</item>
-        <item name="android:colorControlHighlight">@color/primary</item>
-        <item name="android:colorControlNormal">@color/primary</item>
-        <item name="android:windowAnimationStyle">@null</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowActionBar">false</item>
-        <item name="android:windowFullscreen">false</item>
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="android:fontFamily">@font/source_sans_pro</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:letterSpacing">0.05</item>
-    </style>
-
-    <!-- 全屏主题 -->
-    <style name="Theme.CafeteriaMenu.FullScreen" parent="Theme.CafeteriaMenu">
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
-    </style>
-
     <!-- 设置页面主题 -->
     <style name="Theme.CafeteriaMenu.Settings" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
