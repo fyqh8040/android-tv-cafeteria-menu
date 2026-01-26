@@ -22,7 +22,7 @@ android {
         buildConfigField("boolean", "IS_TV", "true")
         
         // 支持中文
-        resConfigs("zh", "zh-CN")
+        resConfigs("zh")
     }
 
     buildTypes {
