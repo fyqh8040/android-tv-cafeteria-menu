@@ -47,6 +47,9 @@ jobs:
         # 接受所有许可证
         yes | sdkmanager --sdk_root=$ANDROID_HOME --licenses || true
     
+    - name: Grant execute permission for gradlew
+      run: chmod +x ./gradlew
+
     - name: Build with Gradle
       run: ./gradlew assembleRelease --no-daemon
     
