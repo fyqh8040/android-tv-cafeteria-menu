@@ -47,12 +47,13 @@ jobs:
         # 接受所有许可证
         yes | sdkmanager --sdk_root=$ANDROID_HOME --licenses || true
     
-    - name: Build with Gradle 8.0
-      run: |
-        # 使用Gradle 8.0，确保与Android Gradle Plugin 8.0.0兼容
-        curl -s -o gradle.zip https://services.gradle.org/distributions/gradle-8.0-bin.zip
-        unzip -q gradle.zip
-        ./gradle-8.0/bin/gradle assembleRelease --no-daemon --warning-mode all --stacktrace
+    - name: Set up Gradle 8.0
+      uses: gradle/gradle-build-action@v2
+      with:
+        gradle-version: '8.0'
+
+    - name: Build with Gradle
+      run: gradle assembleRelease --no-daemon
     
     - name: Upload Release APK
       uses: actions/upload-artifact@v4
