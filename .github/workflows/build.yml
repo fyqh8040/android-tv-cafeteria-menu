@@ -29,7 +29,6 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: false
 
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
@@ -40,12 +39,13 @@ jobs:
           build-tools;34.0.0
           platform-tools
         accept-android-sdk-licenses: true
-        cache: false
 
     - name: Build with Gradle
       run: |
-        # 使用简单的gradle命令，不依赖缓存
-        gradle assembleRelease --no-daemon --no-build-cache
+        # 给gradlew添加执行权限
+        chmod +x ./gradlew
+        # 使用gradle wrapper构建，不依赖缓存
+        ./gradlew assembleRelease --no-daemon --no-build-cache
     
     - name: Upload Release APK
       uses: actions/upload-artifact@v4
