@@ -49,14 +49,14 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: android-tv-apk-${{ github.run_id }}
-        path: app/build/outputs/apk/release/app-release.apk
+        path: build/outputs/apk/release/app-release.apk
         retention-days: 30
-    
+
     - name: Create Release
       if: github.event_name == 'push' && github.ref == 'refs/heads/main'
       uses: softprops/action-gh-release@v2
       with:
-        files: app/build/outputs/apk/release/app-release.apk
+        files: build/outputs/apk/release/app-release.apk
         tag_name: v${{ github.event.inputs.releaseVersion || '1.0.0' }}
         name: Release v${{ github.event.inputs.releaseVersion || '1.0.0' }}
         body: |
