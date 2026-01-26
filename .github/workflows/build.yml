@@ -48,7 +48,7 @@ jobs:
         yes | sdkmanager --sdk_root=$ANDROID_HOME --licenses || true
     
     - name: Build with Gradle
-      run: gradle assembleRelease --no-daemon
+      run: gradle assembleRelease --no-daemon --warning-mode all --stacktrace
     
     - name: Upload Release APK
       uses: actions/upload-artifact@v4
