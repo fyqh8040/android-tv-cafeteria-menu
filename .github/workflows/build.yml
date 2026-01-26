@@ -34,16 +34,22 @@ jobs:
     - name: Set up Android SDK
       uses: android-actions/setup-android@v3
       with:
-        api-level: 34
-        build-tools: 34.0.0
-        # 使用系统安装的 NDK 版本
-        ndk-version: 26.1.10909125
-    
-    - name: Grant execute permission for gradlew
-      run: chmod +x ./gradlew
-    
-    - name: Build Release APK
-      run: ./gradlew assembleRelease
+        cmdline-tools-version: latest
+        accept-android-sdk-licenses: true
+        packages: |
+          platforms;android-34
+          build-tools;34.0.0
+          ndk;26.1.10909125
+
+    - name: Build with Gradle
+      run: |
+        # 使用Gradle Wrapper或者直接使用gradle命令
+        if [ -f ./gradlew ]; then
+          chmod +x ./gradlew
+          ./gradlew assembleRelease
+        else
+          gradle assembleRelease
+        fi
     
     - name: Upload Release APK
       uses: actions/upload-artifact@v4
