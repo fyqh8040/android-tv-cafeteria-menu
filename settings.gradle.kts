@@ -4,6 +4,22 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "com.android.application") {
+                useVersion("8.0.0")
+            }
+            if (requested.id.id == "org.jetbrains.kotlin.android") {
+                useVersion("1.9.22")
+            }
+            if (requested.id.id == "org.jetbrains.kotlin.kapt") {
+                useVersion("1.9.22")
+            }
+            if (requested.id.id == "com.google.dagger.hilt.android") {
+                useVersion("2.48")
+            }
+        }
+    }
 }
 
 dependencyResolutionManagement {
@@ -15,3 +31,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "CafeteriaMenuTV"
+
+// 指定Gradle版本兼容性
+gradleVersion = "8.0"
