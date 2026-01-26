@@ -90,6 +90,7 @@ proguard-rules.pro
 
 # Test results
 *.xml
+!src/main/**/*.xml
 *.html
 
 # IDE settings

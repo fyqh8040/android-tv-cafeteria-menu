@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主色调 - 活力橙（食欲） -->
+    <color name="primary">#FF6B35</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="primaryContainer">#FFE5D9</color>
+    <color name="onPrimaryContainer">#410E00</color>
+    
+    <!-- 辅助色1 - 深红（热点） -->
+    <color name="secondary">#D93A3A</color>
+    <color name="onSecondary">#FFFFFF</color>
+    <color name="secondaryContainer">#FFDAD6</color>
+    <color name="onSecondaryContainer">#410002</color>
+    
+    <!-- 辅助色2 - 活力绿（健康） -->
+    <color name="tertiary">#2ECC71</color>
+    <color name="onTertiary">#FFFFFF</color>
+    <color name="tertiaryContainer">#C6F6D5</color>
+    <color name="onTertiaryContainer">#00210F</color>
+    
+    <!-- 背景色 - 浅色模式 -->
+    <color name="background">#FFFFFF</color>
+    <color name="onBackground">#1A1C1E</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="onSurface">#1A1C1E</color>
+    <color name="surfaceVariant">#F5F5F5</color>
+    <color name="onSurfaceVariant">#49454F</color>
+    
+    <!-- 深色模式背景（仅用于设置页） -->
+    <color name="darkBackground">#121212</color>
+    <color name="darkOnBackground">#E1E1E1</color>
+    <color name="darkSurface">#1E1E1E</color>
+    <color name="darkOnSurface">#E1E1E1</color>
+    <color name="darkSurfaceVariant">#2C2C2C</color>
+    <color name="darkOnSurfaceVariant">#C1C1C1</color>
+    
+    <!-- 错误色 -->
+    <color name="error">#B3261E</color>
+    <color name="onError">#FFFFFF</color>
+    <color name="errorContainer">#FFDAD6</color>
+    <color name="onErrorContainer">#410E0B</color>
+    
+    <!-- 其他颜色 -->
+    <color name="outline">#79747E</color>
+    <color name="outlineVariant">#CAC4D0</color>
+    <color name="scrim">#000000</color>
+    
+    <!-- 状态颜色 -->
+    <color name="success">#2ECC71</color>
+    <color name="warning">#F39C12</color>
+    <color name="info">#3498DB</color>
+    
+    <!-- 渐变颜色 -->
+    <color name="gradientStart">#FF6B35</color>
+    <color name="gradientEnd">#D93A3A</color>
+    
+    <!-- 网络故障态背景色 -->
+    <color name="networkErrorBackground">#FFF3CD</color>
+    
+    <!-- 菜品类别的背景色 -->
+    <color name="category1">#FF6B35</color> <!-- 活力橙 -->
+    <color name="category2">#D93A3A</color> <!-- 深红 -->
+    <color name="category3">#2ECC71</color> <!-- 活力绿 -->
+    <color name="category4">#3498DB</color> <!-- 蓝色 -->
+    <color name="category5">#9B59B6</color> <!-- 紫色 -->
+    <color name="category6">#F39C12</color> <!-- 黄色 -->
+</resources>

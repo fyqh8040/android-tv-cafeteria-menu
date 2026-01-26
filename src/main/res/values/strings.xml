@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 应用名称 -->
+    <string name="app_name">食堂菜单TV</string>
+    
+    <!-- 菜单相关 -->
+    <string name="menu_title">今日菜单</string>
+    <string name="breakfast_title">早餐</string>
+    <string name="lunch_title">午餐</string>
+    <string name="dinner_title">晚餐</string>
+    <string name="loading_menu">正在加载菜单...</string>
+    <string name="no_menu_available">暂无菜单数据</string>
+    <string name="network_error">网络连接错误</string>
+    <string name="retry_button">重试</string>
+    
+    <!-- 菜品状态 -->
+    <string name="dish_available">可点</string>
+    <string name="dish_sold_out">已售罄</string>
+    <string name="dish_low_stock">库存紧张</string>
+    
+    <!-- 时间显示 -->
+    <string name="today">今天</string>
+    <string name="tomorrow">明天</string>
+    <string name="week_format">%1$s 周%2$d</string>
+    <string name="date_format">%1$d月%2$d日</string>
+    
+    <!-- 设置页面 -->
+    <string name="settings_title">设置</string>
+    <string name="refresh_interval">刷新间隔</string>
+    <string name="display_mode">显示模式</string>
+    <string name="image_mode">图片模式</string>
+    <string name="text_mode">文本模式</string>
+    <string name="auto_scroll">自动滚动</string>
+    <string name="scroll_speed">滚动速度</string>
+    <string name="language_settings">语言设置</string>
+    <string name="chinese">中文</string>
+    <string name="english">English</string>
+    
+    <!-- 状态屏幕 -->
+    <string name="idle_message">食堂菜单展示系统</string>
+    <string name="network_error_message">网络连接失败，请检查网络设置</string>
+    <string name="admin_mode">管理员模式</string>
+    
+    <!-- 单位 -->
+    <string name="yuan">元</string>
+    <string name="servings_left">份剩余</string>
+    <string name="minutes_ago">分钟前更新</string>
+    
+    <!-- 操作提示 -->
+    <string name="press_enter_to_select">按Enter键选择</string>
+    <string name="press_back_to_exit">按返回键退出</string>
+    <string name="press_menu_for_settings">按菜单键进入设置</string>
+</resources>
