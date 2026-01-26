@@ -29,31 +29,23 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: gradle
-    
-    - name: Setup Android SDK Environment
-      run: |
-        # 设置ANDROID_HOME环境变量
-        echo "ANDROID_HOME=$ANDROID_HOME" >> $GITHUB_ENV
-        echo "ANDROID_SDK_ROOT=$ANDROID_HOME" >> $GITHUB_ENV
-        echo "PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/build-tools/34.0.0:$ANDROID_HOME/platform-tools" >> $GITHUB_ENV
-        
-        # 列出已安装的Android SDK组件
-        sdkmanager --list --verbose | head -20
-        
-        # 安装所需的SDK组件，使用--sdk_root参数确保正确路径
-        sdkmanager --sdk_root=$ANDROID_HOME "platforms;android-34" "build-tools;34.0.0" "platform-tools" || true
-        
-        # 接受所有许可证
-        yes | sdkmanager --sdk_root=$ANDROID_HOME --licenses || true
-    
-    - name: Set up Gradle 8.0
-      uses: gradle/gradle-build-action@v2
+        cache: false
+
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
       with:
-        gradle-version: '8.0'
+        cmdline-tools-version: latest
+        packages: |
+          platforms;android-34
+          build-tools;34.0.0
+          platform-tools
+        accept-android-sdk-licenses: true
+        cache: false
 
     - name: Build with Gradle
-      run: gradle assembleRelease --no-daemon
+      run: |
+        # 使用简单的gradle命令，不依赖缓存
+        gradle assembleRelease --no-daemon --no-build-cache
     
     - name: Upload Release APK
       uses: actions/upload-artifact@v4
