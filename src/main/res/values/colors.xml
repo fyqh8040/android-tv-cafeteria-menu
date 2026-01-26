@@ -2,15 +2,17 @@
 <resources>
     <!-- 主色调 - 活力橙（食欲） -->
     <color name="primary">#FF6B35</color>
+    <color name="primaryVariant">#D93A3A</color> <!-- 深一点的橙色 -->
     <color name="onPrimary">#FFFFFF</color>
     <color name="primaryContainer">#FFE5D9</color>
     <color name="onPrimaryContainer">#410E00</color>
     
     <!-- 辅助色1 - 深红（热点） -->
     <color name="secondary">#D93A3A</color>
+    <color name="secondaryVariant">#B3261E</color> <!-- 深一点的红色 -->
     <color name="onSecondary">#FFFFFF</color>
     <color name="secondaryContainer">#FFDAD6</color>
-    <color name="onSecondaryContainer">#410002</color>
+    <item name="onSecondaryContainer">#410002</item>
     
     <!-- 辅助色2 - 活力绿（健康） -->
     <color name="tertiary">#2ECC71</color>

@@ -3,18 +3,18 @@
     <!-- 基础主题 -->
     <style name="Theme.CafeteriaMenu" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- 主色调 -->
-        <item name="colorPrimary">#FF6200EE</item>
-        <item name="colorPrimaryVariant">#FF3700B3</item>
-        <item name="colorOnPrimary">#FFFFFFFF</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primaryVariant</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
         
         <!-- 次要色调 -->
-        <item name="colorSecondary">#FF03DAC5</item>
-        <item name="colorSecondaryVariant">#FF018786</item>
-        <item name="colorOnSecondary">#FF000000</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondaryVariant</item>
+        <item name="colorOnSecondary">@color/onSecondary</item>
         
         <!-- 背景色 -->
-        <item name="android:colorBackground">#FF121212</item>
-        <item name="android:colorForeground">#FFFFFFFF</item>
+        <item name="android:colorBackground">@color/darkBackground</item>
+        <item name="android:colorForeground">@color/darkOnBackground</item>
         
         <!-- 字体 -->
         <item name="android:textSize">18sp</item>
@@ -30,6 +30,11 @@
         
         <!-- 卡片样式 -->
         <item name="cardViewStyle">@style/Widget.CafeteriaMenu.CardView</item>
+        
+        <!-- 文本外观 -->
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.CafeteriaMenu.Body</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.CafeteriaMenu.Title</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.CafeteriaMenu.Subtitle</item>
     </style>
     
     <!-- 全屏主题 -->
@@ -61,21 +66,30 @@
     </style>
     
     <!-- 文本样式 -->
+    <style name="TextAppearance.CafeteriaMenu" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/darkOnBackground</item>
+        <item name="fontFamily">sans-serif</item>
+    </style>
+    
     <style name="TextAppearance.CafeteriaMenu.Title">
         <item name="android:textSize">32sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/darkOnBackground</item>
         <item name="android:letterSpacing">0.02</item>
+        <item name="fontFamily">sans-serif</item>
     </style>
     
     <style name="TextAppearance.CafeteriaMenu.Subtitle">
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textColor">#CCCCCC</item>
+        <item name="android:textColor">@color/outlineVariant</item>
+        <item name="fontFamily">sans-serif</item>
     </style>
     
     <style name="TextAppearance.CafeteriaMenu.Body">
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/darkOnBackground</item>
+        <item name="fontFamily">sans-serif</item>
     </style>
 </resources>
