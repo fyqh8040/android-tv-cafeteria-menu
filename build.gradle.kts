@@ -81,17 +81,16 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     
     // Compose
-    implementation(platform("androidx.compose:compose-bom:2024.01.00"))
+    implementation(platform("androidx.compose:compose-bom:2023.10.01"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.material:material-icons-extended")
-    implementation("androidx.compose.material:material")
     
     // Android TV
-    implementation("androidx.tv:tv-foundation:1.0.0-alpha10")
-    implementation("androidx.tv:tv-material:1.0.0-alpha10")
+    implementation("androidx.tv:tv-foundation:1.0.0-alpha09")
+    implementation("androidx.tv:tv-material:1.0.0-alpha09")
     
     // 导航
     implementation("androidx.navigation:navigation-compose:2.7.6")
@@ -111,11 +110,11 @@ dependencies {
     implementation("androidx.datastore:datastore-preferences:1.0.0")
     
     // 依赖注入
-    implementation("com.google.dagger:hilt-android:2.48")
-    kapt("com.google.dagger:hilt-compiler:2.48")
-    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
-    implementation("androidx.hilt:hilt-work:1.1.0")
-    kapt("androidx.hilt:hilt-compiler:1.1.0")
+    implementation("com.google.dagger:hilt-android:2.46")
+    kapt("com.google.dagger:hilt-compiler:2.46")
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+    implementation("androidx.hilt:hilt-work:1.0.0")
+    kapt("androidx.hilt:hilt-compiler:1.0.0")
     
     // 图片加载
     implementation("io.coil-kt:coil-compose:2.5.0")

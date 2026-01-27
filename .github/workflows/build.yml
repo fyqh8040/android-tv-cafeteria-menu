@@ -63,7 +63,7 @@ jobs:
         echo "ANDROID_HOME: $ANDROID_HOME"
         
         # 使用gradle wrapper构建，启用详细日志
-        ./gradlew assembleRelease --no-daemon --info --stacktrace
+        ./gradlew build --no-daemon --info --stacktrace
     
     - name: Upload Release APK
       uses: actions/upload-artifact@v4
