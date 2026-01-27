@@ -33,7 +33,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName("debug") // 开发环境使用debug签名
+            // signingConfig = signingConfigs.getByName("debug") // 开发环境使用debug签名
         }
         debug {
             applicationIdSuffix = ".debug"
@@ -60,7 +60,7 @@ android {
     }
     
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.11"
+        kotlinCompilerExtensionVersion = "1.5.12"
     }
     
     packaging {
@@ -81,17 +81,17 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     
     // Compose
-    implementation(platform("androidx.compose:compose-bom:2023.10.01"))
+    implementation(platform("androidx.compose:compose-bom:2024.01.00"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.material:material-icons-extended")
-    implementation("androidx.compose.material:material:1.5.4")
+    implementation("androidx.compose.material:material")
     
     // Android TV
-    implementation("androidx.tv:tv-foundation:1.0.0-alpha10")
-    implementation("androidx.tv:tv-material:1.0.0-alpha10")
+    implementation("androidx.tv:tv-foundation:1.0.0-beta01")
+    implementation("androidx.tv:tv-material:1.0.0-beta01")
     
     // 导航
     implementation("androidx.navigation:navigation-compose:2.7.6")
