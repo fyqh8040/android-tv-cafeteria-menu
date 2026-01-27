@@ -15,9 +15,6 @@ pluginManagement {
             if (requested.id.id == "org.jetbrains.kotlin.kapt") {
                 useVersion("1.9.23")
             }
-            if (requested.id.id == "com.google.dagger.hilt.android") {
-                useVersion("2.44")
-            }
         }
     }
 }

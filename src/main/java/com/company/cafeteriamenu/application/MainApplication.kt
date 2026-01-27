@@ -2,13 +2,11 @@ package com.company.cafeteriamenu.application
 
 import android.app.Application
 import com.company.cafeteriamenu.BuildConfig
-import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
 /**
  * 应用类，负责初始化应用级别的组件
  */
-@HiltAndroidApp
 class MainApplication : Application() {
     
     override fun onCreate() {

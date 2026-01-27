@@ -1,26 +1,20 @@
 package com.company.cafeteriamenu.presentation.viewmodel
 
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.company.cafeteriamenu.domain.model.DailyMenu
 import com.company.cafeteriamenu.domain.model.MenuConfig
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import java.util.Calendar
-import javax.inject.Inject
 
 /**
  * 主界面ViewModel
  */
-@HiltViewModel
-class MainViewModel @Inject constructor(
-    // 这里可以注入Repository、NetworkMonitor等依赖
-) : ViewModel() {
+class MainViewModel : ViewModel() {
     
     // UI状态
     private val _uiState = MutableStateFlow<UiState>(UiState.Loading)

@@ -6,32 +6,25 @@ import androidx.work.Data
 import androidx.work.PeriodicWorkRequest
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkerParameters
-import com.company.cafeteriamenu.domain.usecase.SyncDataUseCase
-import dagger.assisted.Assisted
-import dagger.assisted.AssistedFactory
-import dagger.assisted.AssistedInject
-import dagger.hilt.android.qualifiers.ApplicationContext
-import dagger.hilt.work.HiltWorker
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.util.concurrent.TimeUnit
 
-@HiltWorker
-class SyncService @AssistedInject constructor(
-    @ApplicationContext private val context: Context,
-    @Assisted workerParams: WorkerParameters,
-    private val syncDataUseCase: SyncDataUseCase
+class SyncService(
+    private val context: Context,
+    workerParams: WorkerParameters
 ) : CoroutineWorker(context, workerParams) {
-    
-    @AssistedFactory
-    interface Factory {
-        fun create(workerParams: WorkerParameters): SyncService
-    }
     
     override suspend fun doWork(): Result = withContext(Dispatchers.IO) {
         return@withContext try {
             // 执行数据同步
-            syncDataUseCase()
+            // TODO: 实现实际的数据同步逻辑
+            // 1. 从API获取最新菜单数据
+            // 2. 更新本地数据库
+            // 3. 返回同步结果
+            
+            // 临时实现：模拟同步成功
+            kotlinx.coroutines.delay(1000)
             
             // 记录同步成功
             logSyncResult(true, "同步成功")

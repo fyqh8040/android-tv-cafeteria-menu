@@ -12,7 +12,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
@@ -21,9 +20,7 @@ import com.company.cafeteriamenu.presentation.common.NetworkErrorScreen
 import com.company.cafeteriamenu.presentation.dashboard.DashboardScreen
 import com.company.cafeteriamenu.presentation.settings.SettingsScreen
 import com.company.cafeteriamenu.presentation.viewmodel.MainViewModel
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -159,4 +156,3 @@ fun ErrorScreen(
         }
     }
 }
-
