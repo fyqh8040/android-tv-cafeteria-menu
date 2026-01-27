@@ -8,17 +8,25 @@ import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkerParameters
 import com.company.cafeteriamenu.domain.usecase.SyncDataUseCase
 import dagger.assisted.Assisted
+import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.work.HiltWorker
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.util.concurrent.TimeUnit
 
+@HiltWorker
 class SyncService @AssistedInject constructor(
     @ApplicationContext private val context: Context,
     @Assisted workerParams: WorkerParameters,
     private val syncDataUseCase: SyncDataUseCase
 ) : CoroutineWorker(context, workerParams) {
+    
+    @AssistedFactory
+    interface Factory {
+        fun create(workerParams: WorkerParameters): SyncService
+    }
     
     override suspend fun doWork(): Result = withContext(Dispatchers.IO) {
         return@withContext try {
