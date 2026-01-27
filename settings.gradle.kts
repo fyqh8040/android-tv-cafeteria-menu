@@ -16,7 +16,7 @@ pluginManagement {
                 useVersion("1.9.23")
             }
             if (requested.id.id == "com.google.dagger.hilt.android") {
-                useVersion("2.48")
+                useVersion("2.46")
             }
         }
     }
