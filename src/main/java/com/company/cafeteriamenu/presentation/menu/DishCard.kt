@@ -93,7 +93,7 @@ fun DishCard(
                     ) {
                         if (dish.isSpicy) {
                             Icon(
-                                imageVector = Icons.Default.Fireplace,
+                                imageVector = Icons.Filled.Fireplace,
                                 contentDescription = "辣",
                                 tint = Color.Red,
                                 modifier = Modifier.size(16.dp)
@@ -101,7 +101,7 @@ fun DishCard(
                         }
                         if (dish.isVegetarian) {
                             Icon(
-                                imageVector = Icons.Default.LocalFlorist,
+                                imageVector = Icons.Filled.LocalFlorist,
                                 contentDescription = "素食",
                                 tint = Color.Green,
                                 modifier = Modifier.size(16.dp)

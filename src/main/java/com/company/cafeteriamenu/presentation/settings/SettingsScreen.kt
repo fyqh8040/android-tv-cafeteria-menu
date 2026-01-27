@@ -21,6 +21,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.tv.material3.Button
 import androidx.tv.material3.Text
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 /**
  * 设置页面组件
@@ -161,8 +164,8 @@ fun SettingsScreen(
                             testResult = "测试中..."
                             // 这里应该调用实际的测试连接逻辑
                             // 模拟延迟
-                            kotlinx.coroutines.GlobalScope.launch {
-                                kotlinx.coroutines.delay(2000)
+                            GlobalScope.launch {
+                                delay(2000)
                                 testResult = "连接成功"
                                 isTesting = false
                             }
@@ -175,8 +178,8 @@ fun SettingsScreen(
                             saveResult = "保存中..."
                             // 这里应该调用实际的保存逻辑
                             // 模拟延迟
-                            kotlinx.coroutines.GlobalScope.launch {
-                                kotlinx.coroutines.delay(1500)
+                            GlobalScope.launch {
+                                delay(1500)
                                 saveResult = "保存成功"
                                 isSaving = false
                             }
