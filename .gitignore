@@ -86,7 +86,7 @@ Thumbs.db
 .env.*.local
 
 # Proguard rules
-proguard-rules.pro
+!proguard-rules.pro
 
 # Test results
 *.xml
