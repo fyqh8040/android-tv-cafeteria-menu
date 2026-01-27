@@ -12,7 +12,7 @@
     <color name="secondaryVariant">#B3261E</color> <!-- 深一点的红色 -->
     <color name="onSecondary">#FFFFFF</color>
     <color name="secondaryContainer">#FFDAD6</color>
-    <item name="onSecondaryContainer">#410002</item>
+    <color name="onSecondaryContainer">#410002</color>
     
     <!-- 辅助色2 - 活力绿（健康） -->
     <color name="tertiary">#2ECC71</color>
