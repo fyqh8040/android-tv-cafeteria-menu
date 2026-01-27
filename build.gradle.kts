@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application") version "8.0.0"
-    id("org.jetbrains.kotlin.android") version "1.9.22"
-    id("org.jetbrains.kotlin.kapt") version "1.9.22"
+    id("org.jetbrains.kotlin.android") version "1.9.23"
+    id("org.jetbrains.kotlin.kapt") version "1.9.23"
     id("com.google.dagger.hilt.android") version "2.48"
 }
 
@@ -60,7 +60,7 @@ android {
     }
     
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.10"
+        kotlinCompilerExtensionVersion = "1.5.11"
     }
     
     packaging {
@@ -141,4 +141,8 @@ dependencies {
 
 kapt {
     correctErrorTypes = true
+}
+
+kotlin {
+    jvmToolchain(17)
 }

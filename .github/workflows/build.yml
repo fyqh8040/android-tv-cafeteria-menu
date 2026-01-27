@@ -41,8 +41,17 @@ jobs:
       run: |
         # 给gradlew添加执行权限
         chmod +x ./gradlew
-        # 使用gradle wrapper构建，不依赖缓存
-        ./gradlew assembleRelease --no-daemon --no-build-cache
+        
+        # 调试信息：显示Java环境
+        echo "JAVA_HOME: $JAVA_HOME"
+        echo "PATH: $PATH"
+        java -version
+        
+        # 显示Android环境
+        echo "ANDROID_HOME: $ANDROID_HOME"
+        
+        # 使用gradle wrapper构建，启用详细日志
+        ./gradlew assembleRelease --no-daemon --no-build-cache --info --stacktrace
     
     - name: Upload Release APK
       uses: actions/upload-artifact@v4
