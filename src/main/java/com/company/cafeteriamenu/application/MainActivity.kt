@@ -4,12 +4,15 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.size
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
@@ -48,15 +51,7 @@ class MainActivity : ComponentActivity() {
 fun CafeteriaMenuTheme(
     content: @Composable () -> Unit
 ) {
-    MaterialTheme(
-        colorScheme = MaterialTheme.colorScheme.copy(
-            primary = androidx.tv.material3.tokens.ColorSchemeKeyTokens.Primary,
-            onPrimary = androidx.tv.material3.tokens.ColorSchemeKeyTokens.OnPrimary,
-            secondary = androidx.tv.material3.tokens.ColorSchemeKeyTokens.Secondary,
-            background = androidx.tv.material3.tokens.ColorSchemeKeyTokens.Background
-        ),
-        typography = androidx.tv.material3.MaterialTheme.typography,
-        shapes = androidx.tv.material3.MaterialTheme.shapes,
+    androidx.tv.material3.MaterialTheme(
         content = content
     )
 }
@@ -136,7 +131,7 @@ fun ErrorScreen(
         androidx.tv.material3.CenterAlignedColumn(
             modifier = Modifier.fillMaxSize()
         ) {
-            androidx.compose.material.icons.Icons.Default.Error?.let {
+            androidx.compose.material.icons.Icons.Filled.Error?.let {
                 androidx.tv.material3.Icon(
                     imageVector = it,
                     contentDescription = "错误",
@@ -165,6 +160,3 @@ fun ErrorScreen(
     }
 }
 
-// 扩展函数：dp单位
-val Number.dp: androidx.compose.ui.unit.Dp
-    get() = androidx.compose.ui.unit.Dp(this.toFloat())
