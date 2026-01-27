@@ -2,7 +2,7 @@ plugins {
     id("com.android.application") version "8.0.0"
     id("org.jetbrains.kotlin.android") version "1.9.23"
     id("org.jetbrains.kotlin.kapt") version "1.9.23"
-    id("com.google.dagger.hilt.android") version "2.46"
+    id("com.google.dagger.hilt.android") version "2.44"
 }
 
 android {
@@ -110,11 +110,10 @@ dependencies {
     implementation("androidx.datastore:datastore-preferences:1.0.0")
     
     // 依赖注入
-    implementation("com.google.dagger:hilt-android:2.46")
-    kapt("com.google.dagger:hilt-compiler:2.46")
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
     implementation("androidx.hilt:hilt-work:1.0.0")
-    kapt("androidx.hilt:hilt-compiler:1.0.0")
     
     // 图片加载
     implementation("io.coil-kt:coil-compose:2.2.2")
