@@ -22,6 +22,7 @@ import androidx.tv.material3.Text
 import com.company.cafeteriamenu.domain.model.DailyMenu
 import com.company.cafeteriamenu.domain.model.MenuConfig
 import com.company.cafeteriamenu.presentation.common.AutoScrollingDishList
+import com.company.cafeteriamenu.presentation.common.AutoScrollColumn
 import com.company.cafeteriamenu.presentation.menu.DishCard
 import com.company.cafeteriamenu.presentation.menu.DishItem
 import com.company.cafeteriamenu.presentation.menu.MenuSection
