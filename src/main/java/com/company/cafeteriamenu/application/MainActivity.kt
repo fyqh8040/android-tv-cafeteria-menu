@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -128,7 +129,7 @@ fun ErrorScreen(
         androidx.tv.material3.CenterAlignedColumn(
             modifier = Modifier.fillMaxSize()
         ) {
-            androidx.compose.material.icons.Icons.Filled.Error?.let {
+            Icons.Filled.Error?.let {
                 androidx.tv.material3.Icon(
                     imageVector = it,
                     contentDescription = "错误",

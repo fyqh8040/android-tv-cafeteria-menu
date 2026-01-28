@@ -3,6 +3,7 @@ package com.company.cafeteriamenu.presentation.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.company.cafeteriamenu.domain.model.DailyMenu
+import com.company.cafeteriamenu.domain.model.Dish
 import com.company.cafeteriamenu.domain.model.MenuConfig
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -26,7 +27,7 @@ class MainViewModel : ViewModel() {
             date = "2026-01-26",
             category = "精选套餐",
             dishes = listOf(
-                com.company.cafeteriamenu.domain.model.Dish(
+                Dish(
                     id = "1",
                     name = "香煎三文鱼",
                     englishName = "Pan-fried Salmon",
@@ -37,7 +38,7 @@ class MainViewModel : ViewModel() {
                     isSpicy = false,
                     isVegetarian = false
                 ),
-                com.company.cafeteriamenu.domain.model.Dish(
+                Dish(
                     id = "2",
                     name = "黑椒牛扒",
                     englishName = "Black Pepper Steak",
@@ -48,7 +49,7 @@ class MainViewModel : ViewModel() {
                     isSpicy = true,
                     isVegetarian = false
                 ),
-                com.company.cafeteriamenu.domain.model.Dish(
+                Dish(
                     id = "3",
                     name = "咖喱鸡饭",
                     englishName = "Curry Chicken Rice",
@@ -59,7 +60,7 @@ class MainViewModel : ViewModel() {
                     isSpicy = true,
                     isVegetarian = false
                 ),
-                com.company.cafeteriamenu.domain.model.Dish(
+                Dish(
                     id = "4",
                     name = "素食套餐",
                     englishName = "Vegetarian Set",
@@ -76,7 +77,7 @@ class MainViewModel : ViewModel() {
             date = "2026-01-26",
             category = "风味面档",
             dishes = listOf(
-                com.company.cafeteriamenu.domain.model.Dish(
+                Dish(
                     id = "5",
                     name = "红烧牛肉面",
                     englishName = "Braised Beef Noodles",
@@ -87,7 +88,7 @@ class MainViewModel : ViewModel() {
                     isSpicy = false,
                     isVegetarian = false
                 ),
-                com.company.cafeteriamenu.domain.model.Dish(
+                Dish(
                     id = "6",
                     name = "兰州拉面",
                     englishName = "Lanzhou Beef Noodles",
@@ -98,7 +99,7 @@ class MainViewModel : ViewModel() {
                     isSpicy = false,
                     isVegetarian = false
                 ),
-                com.company.cafeteriamenu.domain.model.Dish(
+                Dish(
                     id = "7",
                     name = "重庆小面",
                     englishName = "Chongqing Noodles",
@@ -115,7 +116,7 @@ class MainViewModel : ViewModel() {
             date = "2026-01-26",
             category = "特色小炒",
             dishes = listOf(
-                com.company.cafeteriamenu.domain.model.Dish(
+                Dish(
                     id = "8",
                     name = "宫保鸡丁",
                     englishName = "Kung Pao Chicken",
@@ -126,7 +127,7 @@ class MainViewModel : ViewModel() {
                     isSpicy = true,
                     isVegetarian = false
                 ),
-                com.company.cafeteriamenu.domain.model.Dish(
+                Dish(
                     id = "9",
                     name = "鱼香肉丝",
                     englishName = "Yuxiang Shredded Pork",
@@ -137,7 +138,7 @@ class MainViewModel : ViewModel() {
                     isSpicy = true,
                     isVegetarian = false
                 ),
-                com.company.cafeteriamenu.domain.model.Dish(
+                Dish(
                     id = "10",
                     name = "清炒时蔬",
                     englishName = "Stir-fried Vegetables",
