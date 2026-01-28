@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Error
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -16,6 +17,13 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
+import androidx.tv.material3.CircularProgressIndicator
+import androidx.tv.material3.CenterAlignedRow
+import androidx.tv.material3.CenterAlignedColumn
+import androidx.tv.material3.Button
+import androidx.tv.material3.Icon
+import androidx.tv.material3.Surface
+import androidx.tv.material3.Text
 import com.company.cafeteriamenu.presentation.common.IdleStateScreen
 import com.company.cafeteriamenu.presentation.common.NetworkErrorScreen
 import com.company.cafeteriamenu.presentation.dashboard.DashboardScreen
@@ -100,15 +108,15 @@ fun MainApp() {
 
 @Composable
 fun LoadingScreen() {
-    androidx.tv.material3.Surface(
+    Surface(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
     ) {
-        androidx.tv.material3.CenterAlignedRow(
+        CenterAlignedRow(
             modifier = Modifier.fillMaxSize()
         ) {
-            androidx.tv.material3.CircularProgressIndicator()
-            androidx.tv.material3.Text(
+            CircularProgressIndicator()
+            Text(
                 text = "加载菜单数据中...",
                 style = MaterialTheme.typography.titleMedium,
                 modifier = Modifier.padding(start = 16.dp)
@@ -122,37 +130,35 @@ fun ErrorScreen(
     message: String,
     onRetry: () -> Unit
 ) {
-    androidx.tv.material3.Surface(
+    Surface(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
     ) {
-        androidx.tv.material3.CenterAlignedColumn(
+        CenterAlignedColumn(
             modifier = Modifier.fillMaxSize()
         ) {
-            Icons.Filled.Error?.let {
-                androidx.tv.material3.Icon(
-                    imageVector = it,
-                    contentDescription = "错误",
-                    modifier = Modifier.size(64.dp),
-                    tint = MaterialTheme.colorScheme.error
-                )
-            }
-            androidx.tv.material3.Text(
+            Icon(
+                imageVector = Error,
+                contentDescription = "错误",
+                modifier = Modifier.size(64.dp),
+                tint = MaterialTheme.colorScheme.error
+            )
+            Text(
                 text = "加载失败",
                 style = MaterialTheme.typography.headlineSmall,
                 modifier = Modifier.padding(top = 16.dp)
             )
-            androidx.tv.material3.Text(
+            Text(
                 text = message,
                 style = MaterialTheme.typography.bodyMedium,
                 modifier = Modifier.padding(top = 8.dp, horizontal = 32.dp),
                 textAlign = androidx.compose.ui.text.TextAlign.Center
             )
-            androidx.tv.material3.Button(
+            Button(
                 onClick = onRetry,
                 modifier = Modifier.padding(top = 24.dp)
             ) {
-                androidx.tv.material3.Text("重试")
+                Text("重试")
             }
         }
     }
