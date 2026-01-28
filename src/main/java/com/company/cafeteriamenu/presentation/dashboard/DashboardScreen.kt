@@ -29,6 +29,7 @@ import com.company.cafeteriamenu.presentation.menu.DishItem
 import com.company.cafeteriamenu.presentation.menu.MenuSection
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlinx.coroutines.delay
 
 /**
  * 主界面组件，显示今日菜单
@@ -58,7 +59,7 @@ fun DashboardScreen(
     
     // 定期更新时间
     LaunchedEffect(Unit) {
-        kotlinx.coroutines.delay(1000)
+        delay(1000)
         val formatter = SimpleDateFormat("HH:mm:ss", Locale.CHINA)
         currentTime.value = formatter.format(Date())
     }

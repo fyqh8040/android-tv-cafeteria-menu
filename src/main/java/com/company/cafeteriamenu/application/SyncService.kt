@@ -7,6 +7,7 @@ import androidx.work.PeriodicWorkRequest
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkerParameters
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import java.util.concurrent.TimeUnit
 
@@ -24,7 +25,7 @@ class SyncService(
             // 3. 返回同步结果
             
             // 临时实现：模拟同步成功
-            kotlinx.coroutines.delay(1000)
+            delay(1000)
             
             // 记录同步成功
             logSyncResult(true, "同步成功")
