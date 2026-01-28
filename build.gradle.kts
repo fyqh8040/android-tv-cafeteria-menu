@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application") version "8.0.0"
     id("org.jetbrains.kotlin.android") version "1.9.23"
-    id("org.jetbrains.kotlin.kapt") version "1.9.23"
 }
 
 android {
@@ -103,7 +102,6 @@ dependencies {
     // 本地存储
     implementation("androidx.room:room-runtime:2.5.2")
     implementation("androidx.room:room-ktx:2.5.2")
-    kapt("androidx.room:room-compiler:2.5.2")
     
     // 数据存储
     implementation("androidx.datastore:datastore-preferences:1.0.0")
@@ -128,10 +126,6 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-}
-
-kapt {
-    correctErrorTypes = true
 }
 
 kotlin {
