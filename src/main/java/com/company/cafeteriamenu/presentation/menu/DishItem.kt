@@ -4,7 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Fireplace
+import androidx.compose.material.icons.filled.FireExtinguisher
 import androidx.compose.material.icons.filled.LocalFlorist
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -103,7 +103,7 @@ fun DishItem(
                     ) {
                         if (dish.isSpicy) {
                             Icon(
-                                imageVector = Icons.Filled.Fireplace,
+                                imageVector = Icons.Filled.FireExtinguisher,
                                 contentDescription = "辣",
                                 tint = Color.Red,
                                 modifier = Modifier.size(24.dp).padding(end = 8.dp)
