@@ -62,8 +62,17 @@ jobs:
         # 显示Android环境
         echo "ANDROID_HOME: $ANDROID_HOME"
         
-        # 使用gradle wrapper构建，启用详细日志
-        ./gradlew build --no-daemon --info --stacktrace
+        # 显示Gradle版本
+        ./gradlew --version
+        
+        # 清理之前的构建
+        ./gradlew clean --no-daemon
+        
+        # 构建Debug版本（不需要签名）
+        ./gradlew assembleDebug --no-daemon --info
+        
+        # 构建Release版本（使用默认签名配置）
+        ./gradlew assembleRelease --no-daemon --info
     
     - name: Upload Release APK
       uses: actions/upload-artifact@v4

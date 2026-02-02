@@ -31,7 +31,6 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            // signingConfig = signingConfigs.getByName("debug") // 开发环境使用debug签名
         }
         debug {
             applicationIdSuffix = ".debug"
