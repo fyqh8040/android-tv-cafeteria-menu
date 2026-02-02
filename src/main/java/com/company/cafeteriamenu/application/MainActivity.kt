@@ -24,6 +24,7 @@ import androidx.tv.material3.Button
 import androidx.tv.material3.Icon
 import androidx.tv.material3.Surface
 import androidx.tv.material3.Text
+import androidx.compose.ui.graphics.Color
 import com.company.cafeteriamenu.presentation.common.IdleStateScreen
 import com.company.cafeteriamenu.presentation.common.NetworkErrorScreen
 import com.company.cafeteriamenu.presentation.dashboard.DashboardScreen
@@ -108,17 +109,17 @@ fun MainApp() {
 
 @Composable
 fun LoadingScreen() {
-    Surface(
+    androidx.tv.material3.Surface(
         modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colorScheme.background
+        color = androidx.tv.material3.MaterialTheme.colorScheme.background
     ) {
-        CenterAlignedRow(
+        androidx.tv.material3.CenterAlignedRow(
             modifier = Modifier.fillMaxSize()
         ) {
-            CircularProgressIndicator()
-            Text(
+            androidx.tv.material3.CircularProgressIndicator()
+            androidx.tv.material3.Text(
                 text = "加载菜单数据中...",
-                style = MaterialTheme.typography.titleMedium,
+                style = androidx.tv.material3.MaterialTheme.typography.titleMedium,
                 modifier = Modifier.padding(start = 16.dp)
             )
         }
@@ -130,35 +131,35 @@ fun ErrorScreen(
     message: String,
     onRetry: () -> Unit
 ) {
-    Surface(
+    androidx.tv.material3.Surface(
         modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colorScheme.background
+        color = androidx.tv.material3.MaterialTheme.colorScheme.background
     ) {
-        CenterAlignedColumn(
+        androidx.tv.material3.CenterAlignedColumn(
             modifier = Modifier.fillMaxSize()
         ) {
-            Icon(
-                imageVector = Error,
+            androidx.tv.material3.Icon(
+                imageVector = androidx.compose.material.icons.filled.Error,
                 contentDescription = "错误",
                 modifier = Modifier.size(64.dp),
-                tint = MaterialTheme.colorScheme.error
+                tint = androidx.tv.material3.MaterialTheme.colorScheme.error
             )
-            Text(
+            androidx.tv.material3.Text(
                 text = "加载失败",
-                style = MaterialTheme.typography.headlineSmall,
+                style = androidx.tv.material3.MaterialTheme.typography.headlineSmall,
                 modifier = Modifier.padding(top = 16.dp)
             )
-            Text(
+            androidx.tv.material3.Text(
                 text = message,
-                style = MaterialTheme.typography.bodyMedium,
+                style = androidx.tv.material3.MaterialTheme.typography.bodyMedium,
                 modifier = Modifier.padding(top = 8.dp, horizontal = 32.dp),
                 textAlign = androidx.compose.ui.text.TextAlign.Center
             )
-            Button(
+            androidx.tv.material3.Button(
                 onClick = onRetry,
                 modifier = Modifier.padding(top = 24.dp)
             ) {
-                Text("重试")
+                androidx.tv.material3.Text("重试")
             }
         }
     }
